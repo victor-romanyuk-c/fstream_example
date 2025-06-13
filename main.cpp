@@ -133,6 +133,7 @@ int main()
 		switch (value)
 		{
 		case 1:
+			std::cout << "Writing for a file\n";
 			std::cin >> msg;
 			fs << msg << '\n';
 			break;
@@ -140,6 +141,7 @@ int main()
 			while (!fs.eof())
 			{
 				msg = "";
+				std::cout << "Enter your value\n";
 				fs >> msg;
 				std::cout << msg << '\n';
 			}
