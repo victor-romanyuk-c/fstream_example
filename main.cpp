@@ -141,7 +141,7 @@ int main()
 			{
 				msg = "";
 				fs >> msg;
-				std::cout << msg;
+				std::cout << msg << '\n';
 			}
 			break;
 		case 0:
