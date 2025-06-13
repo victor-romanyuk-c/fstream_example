@@ -3,7 +3,7 @@
 #include <fstream>
 #include <ctime>
 
-/*class Point
+class Point
 {
 public:
 	Point()
@@ -22,9 +22,23 @@ public:
 			"\tY: " << _y << "\tZ: " <<
 			_z << '\n';
 	}
+	friend std::ostream& operator<<(std::ostream& os, const Point& point);
+	friend std::istream& operator>>(std::istream& is, Point& point);
 private:
 	int _x, _y, _z;
-};*/
+};
+
+std::ostream& operator<<(std::ostream& os, const Point& point)
+{
+	os << point._x << " " << point._y << " " << point._z << '\n';
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, Point& point)
+{
+	is >> point._x >> point._y >> point._z;
+	return is;
+}
 
 int main()
 {
@@ -82,6 +96,8 @@ int main()
 	fin.close();*/
 
 	std::string path = "myFile.txt";
+	//Point pt(4676, 322, 12);
+	//std::cout << pt;
 	/*Point pt1(456, 121, 985);
 	pt1.Print();
 	std::ofstream fout;
@@ -124,7 +140,7 @@ int main()
 	}
 	else
 	{
-		std::cout << "The file is open!\n";
+		/*std::cout << "The file is open!\n";
 		int value = 0;
 		std::string msg;
 		std::cout << "Input 1 to write to file:\n";
@@ -150,6 +166,14 @@ int main()
 		default:
 			printf("Enter a number!\n");
 			break;
+		}*/
+		std::cout << "The file is open\n";
+		//fs << pt << '\n';
+		while (!fs.eof())
+		{
+			Point pt;
+			fs >> pt;
+			std::cout << pt << '\n';
 		}
 	}
 
