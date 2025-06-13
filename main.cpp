@@ -137,7 +137,12 @@ int main()
 			fs << msg << '\n';
 			break;
 		case 2:
-
+			while (!fs.eof())
+			{
+				msg = "";
+				fs >> msg;
+				std::cout << msg;
+			}
 			break;
 		case 0:
 		default:
