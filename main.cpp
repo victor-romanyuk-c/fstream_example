@@ -120,11 +120,11 @@ int main()
 
 	if (!fs.is_open())
 	{
-		std::cout << "Ошибка открытия файла\n";
+		std::cout << "File isn't opened\n";
 	}
 	else
 	{
-		std::cout << "Файл открыт!\n";
+		std::cout << "The file is open!\n";
 		int value = 0;
 		std::string msg;
 		std::cout << "Input 1 to write to file:\n";
