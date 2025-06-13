@@ -3,7 +3,7 @@
 #include <fstream>
 #include <ctime>
 
-/*class Point
+class Point
 {
 public:
 	Point()
@@ -24,7 +24,7 @@ public:
 	}
 private:
 	int _x, _y, _z;
-};*/
+};
 
 int main()
 {
