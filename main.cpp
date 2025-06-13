@@ -137,6 +137,7 @@ int main()
 			fs << msg << '\n';
 			break;
 		case 2:
+
 			break;
 		case 0:
 		default:
