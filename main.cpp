@@ -120,7 +120,7 @@ int main()
 
 	if (!fs.is_open())
 	{
-		std::cout << "Ошибка открытия файла\n";
+		std::cout << "The file is opened\n";
 	}
 	else
 	{
